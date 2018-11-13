@@ -23,6 +23,6 @@ class List //begin List definition
      /** MISSING OPERATIONS */
      //... fill in ....
     ~List();//destructor
-};//end List definition
+};//end List definition 
 
 #endif
