@@ -21,6 +21,12 @@ List::~List()
     while(num_elements > 0)
       remove(1);
 }
+
+void List::clear()
+{
+	while(size() != 0)
+      remove(1);//remove 1ST element
+	}
 	
 int List::size()
  {
@@ -96,7 +102,29 @@ void List::remove(int k)
 	int List::get(int k)
 	{
 		//just modify insert
-		
+		if (k < 1 or k > num_elements +1) //if the location is invalid
+	     throw out_of_range("List::insert("+to_string(k)+", " +to_string(k)+") failed. (valid indices are 1 to "+to_string(num_elements+1)+")");//throw an "out_of_range" exception
+	
+	
+	
+	if(k == 1)
+	{
+	  cout<< k;
+	 }
+	else
+	 {  
+	
+	  Node* tmpPtr = frontPtr;
+	  int loc = 1; 
+	  
+	    while( loc != k-1) //get pointer to (k-1)th node
+	     {
+		tmpPtr = tmpPtr->link;
+		loc++;
+	     }
+	
+	  cout<< k; 
+        }//end else
 		
 		
 	}	
